@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutMe.css'; // Ensure you have a CSS file for styles
+import './AboutMe.css';
 
 function AboutMe() {
   return (
@@ -12,12 +12,13 @@ function AboutMe() {
           I strive to make a positive impact through my work. I am eager to contribute to projects that 
           drive technological advancements and solve real-world problems.
         </p>
+        {/* Link to download resume */}
         <a href="/resume.pdf" download className="btn resume-btn">Download My Resume</a>
       </div>
 
       <div className="about-me-right">
+        {/* Profile image with alt text for accessibility */}
         <img src="/profile-image.jpg" alt="Deepam Jindal" className="profile-image" />
-        {/* You can add more content like animations, icons, etc. */}
       </div>
     </div>
   );

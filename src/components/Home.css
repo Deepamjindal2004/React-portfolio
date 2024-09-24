@@ -1,15 +1,13 @@
-/* General Styles */
 .home-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #1c1c1c; /* Simple dark background */
-    color: #fff; /* White text for contrast */
+    background-color: #1c1c1c;
+    color: #fff;
 }
 
-/* Hero Section Styles */
 .hero-section {
     text-align: center;
     margin-top: 100px;
@@ -25,7 +23,6 @@ h1 {
     margin-bottom: 40px;
 }
 
-/* Button Styles */
 .contact-btn {
     padding: 12px 30px;
     background-color: #1de9b6;
@@ -42,14 +39,13 @@ h1 {
     transform: scale(1.05);
 }
 
-/* Preview Section Styles */
 .preview-section {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     padding: 60px 0;
-    position: relative; /* Position context for animations */
+    position: relative;
 }
 
 .intro {
@@ -58,25 +54,24 @@ h1 {
 }
 
 .intro h2 {
-    font-size: 2em; /* Adjust font size for headings */
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
 .intro ul {
-    list-style-type: disc; /* Default bullet points */
-    margin-left: 20px; /* Add some space from the left */
-    font-size: 1.2em; /* Adjust font size for list items */
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 1.2em;
 }
 
 .intro li {
-    margin-bottom: 10px; /* Add spacing between list items */
+    margin-bottom: 10px;
 }
 
-/* Preview Images Styles */
 .preview-images {
     display: flex;
     gap: 20px;
-    position: relative; /* Ensure positioning context for animations */
+    position: relative;
 }
 
 .preview-image {
@@ -84,11 +79,11 @@ h1 {
     height: 200px;
     border-radius: 10px;
     object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
-    opacity: 0; /* Start as invisible */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
     animation-duration: 1s;
-    animation-fill-mode: forwards; /* Keep final state after animation ends */
-    position: relative; /* Keep the position relative to its container */
+    animation-fill-mode: forwards;
+    position: relative;
 }
 
 .preview-image.left {
@@ -99,32 +94,30 @@ h1 {
     animation-name: slideFromBottom;
 }
 
-/* Animation Keyframes */
 @keyframes slideFromTop {
     from {
-        transform: translateY(-100px); /* Start from 100px above */
-        opacity: 0; /* Invisible at start */
+        transform: translateY(-100px);
+        opacity: 0;
     }
     to {
-        transform: translateY(0); /* End at original position */
-        opacity: 1; /* Fully visible */
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
 @keyframes slideFromBottom {
     from {
-        transform: translateY(100px); /* Start from 100px below */
-        opacity: 0; /* Invisible at start */
+        transform: translateY(100px);
+        opacity: 0;
     }
     to {
-        transform: translateY(0); /* End at original position */
-        opacity: 1; /* Fully visible */
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
-/* Social Media Links Styles */
 .social-media-links {
-    margin-top: 40px; /* Adjusted spacing from the content above */
+    margin-top: 40px;
 }
 
 .social-media-links a {
@@ -137,22 +130,20 @@ h1 {
 
 .social-media-links a:hover {
     color: #1c8f77;
-    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+    transform: scale(1.2);
 }
 
-/* Font Awesome Icons */
 .fab {
-    font-size: 2em; /* Adjust size of icons */
+    font-size: 2em;
 }
 
-/* Typing Animation Styles */
 .typing-animation {
     display: inline-block;
     font-size: 4em;
     font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 0.15em solid #1de9b6; /* Cursor effect */
+    border-right: 0.15em solid #1de9b6;
     animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
@@ -167,6 +158,6 @@ h1 {
 }
 
 .typing-animation.typing-done {
-    border-right: none; /* Hide cursor */
-    animation: typing 4s steps(40, end) forwards; /* Ensure the text stays visible */
+    border-right: none;
+    animation: typing 4s steps(40, end) forwards;
 }

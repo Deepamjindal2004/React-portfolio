@@ -1,15 +1,13 @@
-/* src/App.css */
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #121212; /* Dark background color */
-  color: #e0e0e0; /* Light text color */
+  background-color: #121212; 
+  color: #e0e0e0; 
 }
 
 nav {
-  background-color: #1e1e1e; /* Slightly lighter dark background */
+  background-color: #1e1e1e; 
   color: #e0e0e0;
   padding: 10px 0;
 }
@@ -40,7 +38,7 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
-  color: #1de9b6; /* Teal accent color on hover */
+  color: #1de9b6; 
 }
 
 main {
@@ -48,9 +46,9 @@ main {
 }
 
 button {
-  background-color: #1de9b6; /* Teal accent color */
+  background-color: #1de9b6; 
   border: none;
-  color: #121212; /* Dark text color for contrast */
+  color: #121212; 
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -62,5 +60,5 @@ button {
 }
 
 button:hover {
-  background-color: #14a89d; /* Darker teal accent color on hover */
+  background-color: #14a89d; 
 }

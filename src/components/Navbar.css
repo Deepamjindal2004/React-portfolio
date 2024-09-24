@@ -1,7 +1,5 @@
-/* src/components/Navbar.css */
-
 .navbar {
-    background-color: #121212; /* Dark background for the navbar */
+    background-color: #121212;
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -20,15 +18,15 @@
 .logo {
     display: flex;
     align-items: center;
-    color: #1de9b6; /* Teal accent color */
+    color: #1de9b6;
     text-decoration: none;
     font-weight: bold;
 }
 
 .logo-img {
-    width: 50px; /* Adjust width as needed */
+    width: 50px;
     height: auto;
-    margin-right: 10px; /* Space between logo and text */
+    margin-right: 10px;
 }
 
 .nav-menu {
@@ -41,22 +39,21 @@
 }
 
 .nav-links {
-    color: #e0e0e0; /* Light text color */
+    color: #e0e0e0;
     text-decoration: none;
     font-size: 1.2em;
-    transition: color 0.3s, transform 0.3s; /* Smooth transitions */
+    transition: color 0.3s, transform 0.3s;
 }
 
 .nav-links:hover {
-    color: #1de9b6; /* Teal accent color on hover */
-    transform: scale(1.1); /* Slightly scale up on hover */
+    color: #1de9b6;
+    transform: scale(1.1);
 }
 
 .nav-links.active {
-    border-bottom: 2px solid #1de9b6; /* Teal border for active link */
+    border-bottom: 2px solid #1de9b6;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     .navbar-container {
         flex-direction: column;
@@ -70,6 +67,6 @@
     }
 
     .nav-item {
-        margin: 10px 0; /* Adjust margin for vertical layout */
+        margin: 10px 0;
     }
 }

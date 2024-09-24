@@ -1,5 +1,5 @@
 import React from 'react';
-import './Logo.css'; // Optional: for logo-specific styling
+import './Logo.css';
 
 function Logo() {
   return (

@@ -1,18 +1,16 @@
-/* src/components/ContactMe.css */
-
 .contact-me {
     padding: 20px;
-    background-color: #121212; /* Dark background for the entire page */
-    color: #e0e0e0; /* Light text color for contrast */
-    min-height: 100vh; /* Ensure full viewport height */
-    opacity: 0; /* Start with hidden opacity */
-    animation: fadeIn 1.5s forwards; /* Apply fade-in animation */
+    background-color: #121212;
+    color: #e0e0e0;
+    min-height: 100vh;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
 }
 
 .contact-me h1 {
     text-align: center;
-    color: #1de9b6; /* Teal accent color */
-    margin-bottom: 30px; /* Add space below heading */
+    color: #1de9b6;
+    margin-bottom: 30px;
 }
 
 .contact-info {
@@ -22,7 +20,7 @@
 
 .contact-info p {
     font-size: 1.2em;
-    color: #b0b0b0; /* Slightly dimmer text color */
+    color: #b0b0b0;
 }
 
 .contact-form {
@@ -31,30 +29,28 @@
     align-items: center;
 }
 
-/* Input and textarea styles */
 .contact-form input,
 .contact-form textarea {
-    background-color: #1e1e1e; /* Dark background color */
+    background-color: #1e1e1e;
     border: 1px solid #333;
     border-radius: 5px;
-    color: #e0e0e0; /* Light text color */
+    color: #e0e0e0;
     padding: 10px;
     margin: 5px;
     width: 100%;
-    max-width: 500px; /* Adjust width as needed */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form textarea {
-    height: 150px; /* Adjust height as needed */
+    height: 150px;
     resize: vertical;
 }
 
-/* Button styles */
 .contact-form button {
-    background-color: #1de9b6; /* Teal accent color */
+    background-color: #1de9b6;
     border: none;
-    color: #121212; /* Dark text color for contrast */
+    color: #121212;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -63,15 +59,14 @@
     margin-top: 10px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .contact-form button:hover {
-    background-color: #14a89d; /* Darker teal accent color on hover */
-    transform: scale(1.05); /* Slightly scale up on hover */
+    background-color: #14a89d;
+    transform: scale(1.05);
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
     from {
         opacity: 0;

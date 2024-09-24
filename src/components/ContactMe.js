@@ -1,21 +1,15 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // For React Router v6
-import './ContactMe.css'; // Ensure this file is updated with the new CSS
+import { useNavigate } from 'react-router-dom';
+import './ContactMe.css';
 
 function ContactMe() {
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const navigate = useNavigate(); // For navigation after form submission
+  const [formSubmitted, setFormSubmitted] = useState(false); // State to track form submission
+  const navigate = useNavigate(); // Hook for navigation
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent default form submission behavior
-
-    // You can optionally add code to handle form submission, such as sending the form data
-
-    // Set the form submission state to true
-    setFormSubmitted(true);
-
-    // Redirect to the home page after submission
-    navigate('/'); // Replace '/' with the correct home route if necessary
+    event.preventDefault(); // Prevent default form submission
+    setFormSubmitted(true); // Update state to show success message
+    navigate('/'); // Navigate back to the home page
   };
 
   return (
@@ -27,11 +21,13 @@ function ContactMe() {
         <p>Phone: (437)-870-2429</p>
       </div>
       <form className="contact-form" onSubmit={handleSubmit}>
+        {/* Input fields for user information */}
         <input type="text" placeholder="Your Name" required />
         <input type="email" placeholder="Your Email" required />
         <textarea placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
+      {/* Conditional rendering for submission confirmation */}
       {formSubmitted && <p>Message sent successfully!</p>}
     </div>
   );

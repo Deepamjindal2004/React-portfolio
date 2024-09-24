@@ -1,6 +1,7 @@
 import React from 'react';
-import './Projects.css'; // Ensure the CSS file is correctly linked
+import './Projects.css';
 
+// Array of project data
 const projects = [
   {
     title: 'Project A',
@@ -8,7 +9,7 @@ const projects = [
     tags: ['React', 'Express', 'Node'],
     demoLink: '#',
     sourceLink: '#',
-    image: '/Project_A.jpeg', // Replace with the actual path to your image
+    image: '/Project_A.jpeg',
   },
   {
     title: 'Project B',
@@ -16,7 +17,7 @@ const projects = [
     tags: ['JavaScript', 'API', 'MongoDB'],
     demoLink: '#',
     sourceLink: '#',
-    image: '/Project_B.jpeg', // Replace with the actual path to your image
+    image: '/Project_B.jpeg',
   },
   {
     title: 'Project C',
@@ -24,7 +25,7 @@ const projects = [
     tags: ['HTML', 'CSS', 'JavaScript'],
     demoLink: '#',
     sourceLink: '#',
-    image: '/Project_C.jpeg', // Replace with the actual path to your image
+    image: '/Project_C.jpeg',
   },
 ];
 
@@ -35,14 +36,19 @@ const Projects = () => {
       <div className="project-cards">
         {projects.map((project, index) => (
           <div className="card" key={index}>
+            {/* Display project image */}
             <img src={project.image} alt={project.title} className="card-image" />
+            {/* Project title */}
             <h2 className="card-title">{project.title}</h2>
+            {/* Project description */}
             <p className="card-description">{project.description}</p>
+            {/* Display project tags */}
             <div className="card-tags">
               {project.tags.map((tag, index) => (
                 <span className="tag" key={index}>{tag}</span>
               ))}
             </div>
+            {/* Links for demo and source code */}
             <div className="card-buttons">
               <a href={project.demoLink} className="card-button">Demo</a>
               <a href={project.sourceLink} className="card-button">Source</a>

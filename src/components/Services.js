@@ -1,7 +1,8 @@
 import React from 'react';
-import './Services.css'; // Ensure this file is updated with the new CSS
+import './Services.css';
 
 function Services() {
+  // Array of service offerings with relevant details
   const services = [
     {
       icon: 'fa-code',
@@ -45,8 +46,10 @@ function Services() {
     <div className="services-container">
       <h1>My Services</h1>
       <div className="services-grid">
+        {/* Map through services to display each service card */}
         {services.map((service, index) => (
           <div className="service-card" key={index}>
+            {/* Font Awesome icon for the service */}
             <i className={`fas ${service.icon} service-icon`}></i>
             <h2 className="service-title">{service.title}</h2>
             <p className="service-description">{service.description}</p>
