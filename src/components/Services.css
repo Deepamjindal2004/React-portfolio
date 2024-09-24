@@ -1,0 +1,84 @@
+/* src/components/Services.css */
+
+/* General container styles */
+.services-container {
+    padding: 40px 20px;
+    background-color: #121212; /* Dark background for the entire services section */
+    color: #e0e0e0; /* Light text color */
+    text-align: center;
+}
+
+/* Title styles */
+.services-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+/* Grid layout for services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    max-width: 1200px; /* Optional: limit maximum width */
+    margin: 0 auto; /* Center the grid */
+}
+
+/* Card styles */
+.service-card {
+    background-color: #1c1c1c; /* Dark card background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow for dark theme */
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0; /* Start with hidden opacity */
+    animation: fadeIn 1.5s forwards; /* Apply fade-in animation */
+}
+
+/* Delay for animation */
+.service-card:nth-child(1) { animation-delay: 0.2s; }
+.service-card:nth-child(2) { animation-delay: 0.4s; }
+.service-card:nth-child(3) { animation-delay: 0.6s; }
+.service-card:nth-child(4) { animation-delay: 0.8s; }
+.service-card:nth-child(5) { animation-delay: 1.0s; }
+.service-card:nth-child(6) { animation-delay: 1.2s; }
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* More pronounced shadow on hover */
+}
+
+/* Icon styles */
+.service-icon {
+    font-size: 3em;
+    color: #1de9b6; /* Accent color for icons */
+    margin-bottom: 15px;
+}
+
+/* Title and description styles */
+.service-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.service-description {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+/* Price styles */
+.service-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e0e0e0; /* Light price color for contrast */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

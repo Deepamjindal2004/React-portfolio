@@ -1,0 +1,172 @@
+/* General Styles */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1c1c1c; /* Simple dark background */
+    color: #fff; /* White text for contrast */
+}
+
+/* Hero Section Styles */
+.hero-section {
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+/* Button Styles */
+.contact-btn {
+    padding: 12px 30px;
+    background-color: #1de9b6;
+    color: #121212;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-btn:hover {
+    background-color: #1c8f77;
+    transform: scale(1.05);
+}
+
+/* Preview Section Styles */
+.preview-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 60px 0;
+    position: relative; /* Position context for animations */
+}
+
+.intro {
+    text-align: left;
+    max-width: 500px;
+}
+
+.intro h2 {
+    font-size: 2em; /* Adjust font size for headings */
+    margin-bottom: 20px;
+}
+
+.intro ul {
+    list-style-type: disc; /* Default bullet points */
+    margin-left: 20px; /* Add some space from the left */
+    font-size: 1.2em; /* Adjust font size for list items */
+}
+
+.intro li {
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+
+/* Preview Images Styles */
+.preview-images {
+    display: flex;
+    gap: 20px;
+    position: relative; /* Ensure positioning context for animations */
+}
+
+.preview-image {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    opacity: 0; /* Start as invisible */
+    animation-duration: 1s;
+    animation-fill-mode: forwards; /* Keep final state after animation ends */
+    position: relative; /* Keep the position relative to its container */
+}
+
+.preview-image.left {
+    animation-name: slideFromTop;
+}
+
+.preview-image.right {
+    animation-name: slideFromBottom;
+}
+
+/* Animation Keyframes */
+@keyframes slideFromTop {
+    from {
+        transform: translateY(-100px); /* Start from 100px above */
+        opacity: 0; /* Invisible at start */
+    }
+    to {
+        transform: translateY(0); /* End at original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+@keyframes slideFromBottom {
+    from {
+        transform: translateY(100px); /* Start from 100px below */
+        opacity: 0; /* Invisible at start */
+    }
+    to {
+        transform: translateY(0); /* End at original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Social Media Links Styles */
+.social-media-links {
+    margin-top: 40px; /* Adjusted spacing from the content above */
+}
+
+.social-media-links a {
+    margin: 0 15px;
+    font-size: 1.0em;
+    color: #1de9b6;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media-links a:hover {
+    color: #1c8f77;
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
+/* Font Awesome Icons */
+.fab {
+    font-size: 2em; /* Adjust size of icons */
+}
+
+/* Typing Animation Styles */
+.typing-animation {
+    display: inline-block;
+    font-size: 4em;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #1de9b6; /* Cursor effect */
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #1de9b6; }
+}
+
+.typing-animation.typing-done {
+    border-right: none; /* Hide cursor */
+    animation: typing 4s steps(40, end) forwards; /* Ensure the text stays visible */
+}

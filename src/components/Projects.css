@@ -1,0 +1,123 @@
+/* Ensure the whole page has a dark background */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #121212; /* Dark background for the entire page */
+}
+
+.projects {
+    padding: 40px 20px;
+    background-color: #121212; /* Dark background for the entire projects section */
+    color: #e0e0e0; /* Light text color */
+    text-align: center;
+    min-height: 100vh; /* Ensures it covers the full height of the viewport */
+    opacity: 0; /* Initial state for fade-in animation */
+    animation: fadeIn 2s forwards; /* Animation for the section */
+}
+
+.projects-title {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    animation: fadeInUp 1.5s forwards; /* Animation for the title */
+}
+
+/* Decreased card width and adjusted layout */
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive card width */
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #1c1c1c; /* Darker card background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0; /* Initial state for fade-in animation */
+    transform: translateY(20px); /* Initial position for slide-in animation */
+    animation: fadeInUp 1s forwards; /* Fade-in and slide-up animation for cards */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.card-image {
+    width: 100%;
+    height: 160px; /* Reduced height */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 1.4em;
+    margin: 15px 0 10px;
+}
+
+.card-description {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+/* Unified tag color with a lighter shade */
+.card-tags {
+    margin-bottom: 15px;
+}
+
+.tag {
+    background-color: #e77d8e; /* Unified color for all tags */
+    color: #121212; /* Dark text */
+    padding: 5px 12px;
+    border-radius: 20px; /* Rounder tags */
+    margin-right: 5px;
+    display: inline-block;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+/* Rounder buttons */
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card-button {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #1de9b6; /* Teal button background */
+    color: #121212; /* Dark text for buttons */
+    border: none;
+    border-radius: 25px; /* Fully rounded buttons */
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    text-align: center;
+}
+
+.card-button:hover {
+    background-color: #1c8f77; /* Darker teal on hover */
+    transform: scale(1.05);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

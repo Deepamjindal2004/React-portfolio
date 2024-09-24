@@ -1,0 +1,75 @@
+/* src/components/Navbar.css */
+
+.navbar {
+    background-color: #121212; /* Dark background for the navbar */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #1de9b6; /* Teal accent color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo-img {
+    width: 50px; /* Adjust width as needed */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-links {
+    color: #e0e0e0; /* Light text color */
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.nav-links:hover {
+    color: #1de9b6; /* Teal accent color on hover */
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+.nav-links.active {
+    border-bottom: 2px solid #1de9b6; /* Teal border for active link */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav-item {
+        margin: 10px 0; /* Adjust margin for vertical layout */
+    }
+}
